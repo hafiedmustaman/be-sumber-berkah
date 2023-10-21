@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name'); // field ini menggunakan type data string dan digunakan untuk menyimpan nama kategori.
+            $table->string('slug'); // field ini menggunakan type data string dan digunakan untuk membuat URL kategori menjadi SEO friendly.
+            $table->string('image'); // field ini menggunakan type data string dan digunakan untuk menyimpan data gambar dari kategori.
             $table->timestamps();
         });
     }
