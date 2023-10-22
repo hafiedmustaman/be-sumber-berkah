@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('provinces', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('province_id'); // field ini menggunakan type data unsignedInteger dan digunakan untuk menyimpan ID provinsi.
+            $table->string('name'); // field ini menggunakan type data string dan digunakan untuk menyimpan nama provinsi.
             $table->timestamps();
         });
     }
