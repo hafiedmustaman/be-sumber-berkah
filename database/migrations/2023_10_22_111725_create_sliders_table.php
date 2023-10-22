@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
+            $table->string('image'); // field ini menggunakan type data string dan digunakan untuk menyimpan nama dari image.
+            $table->string('link'); // field ini menggunakan type data string dan digunakan untuk menyimpan link dari data slider.
             $table->timestamps();
         });
     }
