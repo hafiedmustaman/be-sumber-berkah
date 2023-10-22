@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('province_id'); // field ini menggunakan type data unsignedInteger dan digunakan untuk menyimpan ID provinsi.
+            $table->unsignedInteger('city_id'); // field ini menggunakan type data unsignedInteger dan digunakan untuk menyimpan ID city / kota.
+            $table->string('name'); // field ini menggunakan type data srting dan digunakan untuk menyimpan nama city / kota.
             $table->timestamps();
         });
     }
