@@ -32,4 +32,15 @@ class Product extends Model
             get: fn ($value) => asset('/storage/products/' . $value),
         );
     }
+
+    /**
+     * category
+     *
+     * @return void
+     */
+    // difungsikan untuk mendeklarasikan bahwa model Category atau table categories ini dimiliki dan terhubung dengan model Product atau table products.
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

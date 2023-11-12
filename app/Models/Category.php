@@ -32,4 +32,15 @@ class Category extends Model
             get: fn ($value) => asset('/storage/categories/' . $value),
         );
     }
+
+    /**
+     * products
+     *
+     * @return void
+     */
+    // function/method tersebut berfungsi memberitahukan ke sistem, bahwa kita akan membuat relasi Many ke model Product atau table products.
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
