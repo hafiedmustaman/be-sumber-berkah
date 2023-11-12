@@ -41,4 +41,15 @@ class Customer extends Authenticatable // Authenticatable digunakan untuk melaku
     {
         return $this->hasMany(Invoice::class);
     }
+
+    /**
+     * carts
+     *
+     * @return void
+     */
+    // digunakan untuk memberitahukan ke sistem bahwa model Customer atau table customers ini akan membuat relasi Many ke model Cart atau table carts.
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
+    }
 }

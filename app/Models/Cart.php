@@ -29,4 +29,15 @@ class Cart extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
+    /**
+     * customer
+     *
+     * @return void
+     */
+    // digunakan untuk memberitahukan ke sistem, bahwa model Cart atau table carts ini dimiliki dan terhubung dengan model Customer atau table customers.
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
 }
