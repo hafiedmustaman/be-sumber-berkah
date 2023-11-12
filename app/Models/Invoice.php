@@ -29,4 +29,15 @@ class Invoice extends Model
     {
         return $this->hasMany(Order::class);
     }
+
+    /**
+     * customer
+     *
+     * @return void
+     */
+    // digunakan untuk memberitahukan sistem, bahwa model Invoice atau table invoices ini dimiliki dan terhubung dengan model Customer atau table customers.
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
 }

@@ -30,4 +30,15 @@ class Customer extends Authenticatable // Authenticatable digunakan untuk melaku
         'password',
         'remember_token',
     ];
+
+    /**
+     * invoice
+     *
+     * @return void
+     */
+    // digunakan untuk memberitahukan ke sistem bahwa model Customer atau table customers ini akan membuat relasi Many ke model Invoice atau table invoices.
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class);
+    }
 }
