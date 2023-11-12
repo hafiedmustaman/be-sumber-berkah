@@ -43,4 +43,15 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    /**
+     * carts
+     *
+     * @return void
+     */
+    // digunakan untuk memberitahukan sistem, bahwa model Product atau table products akan membuat relasi Many ke model Cart atau table carts.
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
+    }
 }

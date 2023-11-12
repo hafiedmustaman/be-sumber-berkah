@@ -18,4 +18,15 @@ class Cart extends Model
     protected $fillable = [
         'product_id', 'customer_id', 'price', 'quantity', 'weight'
     ];
+
+    /**
+     * product
+     *
+     * @return void
+     */
+    // difungsikan dan digunakan untuk memberitahu kepada sistem, bahwa model Cart atau table carts ini dimiliki dan terhubung dengan model Product atau table products.
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
