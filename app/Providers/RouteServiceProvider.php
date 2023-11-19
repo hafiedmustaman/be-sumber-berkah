@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/admin/dashboard'; // untuk melakukan redirect setelah kita berhasil melakukan proses authentication di Laravel. Kita araahkan ke dalam link /admin/dashboard.
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
