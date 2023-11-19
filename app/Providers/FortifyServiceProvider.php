@@ -41,5 +41,35 @@ class FortifyServiceProvider extends ServiceProvider
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
+
+        // untuk melakukan load view login.blade.php
+        // untuk proses login
+        Fortify::loginView(function () {
+            return view('auth.login');
+        });
+        
+        // untuk melakukan load view forgot-password.blade.php
+        // untuk mengirim link reset password
+        Fortify::requestPasswordResetLinkView(function () {
+            return view('auth.forgot-password');
+        });
+        
+        // untuk melakukan load view reset
+        // Setelah link berhasil dikirim melalui email, maka kita akan melakukan update password.
+        Fortify::resetPasswordView(function ($request) {
+            return view('auth.reset-password', ['request' => $request]);
+        });
+        
+        // untuk melakukan load view confirm password
+        // untuk verifikasi saat kita ingin mengaktifkan fitur two factor authentication.
+        Fortify::confirmPasswordView(function () {
+            return view('auth.confirm-password');
+        });
+        
+        // untuk melakukan load view two factor authentication
+        // Halaman ini akan muncul, jika kita mengaktifkan fitur two factor authentication dan melakukan proses login.
+        Fortify::twoFactorChallengeView(function () {
+            return view('auth.two-factor-challenge');
+        });
     }
 }
