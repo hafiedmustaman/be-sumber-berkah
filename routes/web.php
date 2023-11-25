@@ -24,5 +24,8 @@ Route::prefix('admin')->group(function () { // <-- Prefix "admin" digunakan untu
 
         //route category
         Route::resource('/category', CategoryController::class, ['as' => 'admin']);
+
+        //route product
+        Route::resource('/product', ProductController::class, ['as' => 'admin']);
     });
 });
