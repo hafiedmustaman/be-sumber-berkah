@@ -33,5 +33,8 @@ Route::prefix('admin')->group(function () { // <-- Prefix "admin" digunakan untu
 
         //route customer
         Route::get('/customer', [CustomerController::class, 'index'])->name('admin.customer.index');
+
+        //route slider
+        Route::resource('/slider', SliderController::class, ['except' => ['show', 'create', 'edit', 'update'], 'as' => 'admin']);
     });
 });
