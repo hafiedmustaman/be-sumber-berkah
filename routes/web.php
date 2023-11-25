@@ -21,5 +21,8 @@ Route::prefix('admin')->group(function () { // <-- Prefix "admin" digunakan untu
         
         //route dashboard
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard.index');
+
+        //route category
+        Route::resource('/category', CategoryController::class, ['as' => 'admin']);
     });
 });
