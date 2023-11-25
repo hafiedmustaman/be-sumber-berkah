@@ -36,5 +36,8 @@ Route::prefix('admin')->group(function () { // <-- Prefix "admin" digunakan untu
 
         //route slider
         Route::resource('/slider', SliderController::class, ['except' => ['show', 'create', 'edit', 'update'], 'as' => 'admin']);
+
+        //profile
+        Route::get('/profile', [ProfileController::class, 'index'])->name('admin.profile.index');
     });
 });
