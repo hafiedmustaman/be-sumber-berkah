@@ -30,5 +30,8 @@ Route::prefix('admin')->group(function () { // <-- Prefix "admin" digunakan untu
 
         //route order
         Route::resource('/order', OrderController::class, ['except' => ['create', 'store', 'edit', 'update', 'destroy'], 'as' => 'admin']);
+
+        //route customer
+        Route::get('/customer', [CustomerController::class, 'index'])->name('admin.customer.index');
     });
 });
