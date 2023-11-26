@@ -39,5 +39,8 @@ Route::prefix('admin')->group(function () { // <-- Prefix "admin" digunakan untu
 
         //profile
         Route::get('/profile', [ProfileController::class, 'index'])->name('admin.profile.index');
+
+        //route user
+        Route::resource('/user', UserController::class, ['except' => ['show'], 'as' => 'admin']);
     });
 });
