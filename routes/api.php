@@ -52,3 +52,8 @@ Route::post('/rajaongkir/checkOngkir', [RajaOngkirController::class, 'checkOngki
  */
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 Route::post('/notificationHandler', [CheckoutController::class, 'notificationHandler'])->name('notificationHanlder');
+
+/**
+ * Route API Slider
+ */
+Route::get('/sliders', [SliderController::class, 'index'])->name('customer.slider.index');
