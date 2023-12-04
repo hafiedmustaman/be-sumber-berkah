@@ -64,9 +64,9 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
-          <i class="fab fa-apple"></i>
+          <i class="fas fa-store-alt"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">APPLE STORE</div>
+        <div class="sidebar-brand-text mx-3">SUMBER BERKAH STORE</div>
       </a>
 
       <!-- Divider -->
@@ -198,7 +198,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Hak Cipta Dilindungi &copy; 2020 Online Shop - SantriKoding.com </span>
+            <span>&copy; 2020-<script>document.write(new Date().getFullYear())</script> • <b>Sumber Berkah Store</b></span>
           </div>
         </div>
       </footer>
